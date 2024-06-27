@@ -119,3 +119,14 @@ body {
     font-weight: bold;
   }
 }
+
+.product-container::-webkit-scrollbar {
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+}
+.product-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
