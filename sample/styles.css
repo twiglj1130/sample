@@ -49,11 +49,11 @@ body {
   min-width: 200px;
   height: 300px;
   margin: 10px;
-  
-  
-
-
   border: 1px solid #ccc;
+  user-select: none; /* テキスト選択を無効にする */
+  -webkit-user-select: none; /* Safari用のテキスト選択を無効にする */
+  -moz-user-select: none; /* Firefox用のテキスト選択を無効にする */
+  -ms-user-select: none; /* Internet Explorer/Edge用のテキスト選択を無効にする */
 }
 
 .product-img {
