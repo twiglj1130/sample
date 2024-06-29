@@ -127,6 +127,10 @@ body {
   border-radius: 20px;
 }
 .product-container::-webkit-scrollbar-thumb {
-  background-color: #ccc;
+  background-color: #bebebe;
   border-radius: 20px;
+}
+
+.product-container::-webkit-scrollbar-thumb:active {
+  background-color: #d3d3d3; /* 色を薄くする */
 }

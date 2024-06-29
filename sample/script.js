@@ -7,27 +7,20 @@ let scrollLeft;
 
 productContainer.addEventListener('mousedown', (e) => {
   isDown = true;
-  // productContainer.classList.add('custom');
   startX = e.pageX - productContainer.offsetLeft;
   scrollLeft = productContainer.scrollLeft;
 });
 
-productContainer.addEventListener('mouseleave', () => {
+document.addEventListener('mouseup', () => {
   isDown = false;
-  // productContainer.classList.remove('custom');
 });
 
-productContainer.addEventListener('mouseup', () => {
-  isDown = false;
-  // productContainer.classList.remove('custom');
-});
-
-productContainer.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - productContainer.offsetLeft;
-  const walk = (x - startX) * 1.5; // スクロールの速さを調整
-  productContainer.scrollLeft = scrollLeft - walk;
+  const walk = (x - startX) * 1; // スクロールの速さを調整　walkは、移動量に基づいてスクロール量を計算します。
+  productContainer.scrollLeft = scrollLeft - walk; //scrollLeft ドラッグ操作の開始時に記録された要素のスクロール位置。
 });
 
 
