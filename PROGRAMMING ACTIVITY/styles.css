@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* height: 100%; */
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} */
+
+h1,
+h2,
+h3,
+header,
+footer {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    z-index: 5000;
+}
+
+h1 {
+    color: #eb6100;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    position: absolute;
+    left: 5%;
+    width: 50%;
+    /* メニューアイコンと被らないように */
+}
+
+h2 {
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    padding: 40px 0;
+    color: #eb6100;
+}
+
+.conparison-chart h3 {
+    line-height: 3;
+    font-size: 26px;
+    letter-spacing: 0.05em;
+}
+
+nav {
+    position: absolute;
+    right: 10%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+a:link,
+a:visited {
+    color: #000000;
+}
+
+a:hover,
+a:focus {
+    color: #eb6100;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 50px 60px 150px 60px;
+}
+
+.pictuture {
+    background-color: #ffffff;
+    padding: 50px 50px 0 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    padding: 10px;
+    font-weight: bold;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table {
+    font-weight: bold;
+    margin: 0 auto;
+    width: 800px;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 2px solid rgba(204, 204, 204, 0.5);
+}
+
+/* テーブルを横スクロール可能にする */
+.table-container {
+    overflow-x: auto;
+}
+
+/* テーブルの両端の縦線を消す */
+table th:first-child,
+table td:first-child {
+    border-left: none;
+}
+
+table th:last-child,
+table td:last-child {
+    border-right: none;
+}
+
+
+th:nth-child(2),
+th:nth-child(3) {
+    color: #303949;
+}
+
+th:nth-child(4) {
+    color: #ff5959;
+}
+
+tbody tr:nth-child(1) td:nth-child(4),
+tbody tr:nth-child(3) td:nth-child(4),
+tbody tr:nth-child(5) td:nth-child(4),
+tbody tr:nth-child(6) td:nth-child(4) {
+    color: #ff5959;
+}
+
+/* 表のヘッダーの下線 */
+thead {
+    border-bottom: #303949 solid 5px;
+}
+
+.menu-icon {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 20px 10px;
+    border-left: black solid 3px;
+    z-index: 9900;
+    font-weight: bold;
+}
+
+.main-visual {
+    position: relative;
+    top: 100px;
+    width: calc(100% - 20px);
+    /* Add left and right margin */
+    margin: 0 10px;
+    /* Add left and right margin */
+    height: 100vh;
+    /* z-index: -1; */
+}
+
+.main-visual::before {
+    content: "";
+    /* background: url(main.png) no-repeat center center / cover; */
+    background-image: url(./img/main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 60px;
+    width: calc(100% - 120px);
+    height: 90vh;
+    z-index: -1;
+}
+
+.mv::before {
+    content: "お店の\A魅力を\Aもっと広めたい？";
+    white-space: pre-line;
+    /* 改行を有効にする */
+    position: fixed;
+    top: 65vh;
+    left: 36px;
+    font-size: 44px;
+    color: #eb6100;
+    font-weight: bold;
+    z-index: -1;
+}
+
+
+/* topic SECTION */
+.topic {
+    border-left: #000000 solid 3px;
+    max-height: 100px;
+}
+
+.topic h2 {
+    padding: 12px 20px;
+}
+
+.topic-list {
+    overflow-y: scroll;
+    height: 55px;
+    padding-left: 20px;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.topic-list::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.topic-item {
+    display: flex;
+    padding: 10px 10px 0px 0;
+    margin-bottom: 10px;
+}
+
+.vision {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .vision img {
+    width: 80%;
+} */
+.vision-text {
+    text-align: right;
+}
+
+.vision-text p:first-of-type {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #eb6100;
+    font-weight: bold;
+    line-height: 2;
+    padding: 0;
+}
+
+.vision-text p:first-of-type::after {
+    content: "";
+    display: block;
+    border-bottom: #eb6100 solid 3px;
+    width: 271px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.vision-text p {
+    padding-top: 50px;
+    line-height: 2;
+}
+
+
+/* サービス SECTION */
+.service-title h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.service-text {
+    float: right;
+    line-height: 2;
+}
+
+.service-box {
+    content: "";
+    background-image: url(./img/service.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+/* conparison-chart */
+.conparison-chart {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.conparison-chart h3 {
+    max-width: 1100px;
+    line-height: 2;
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    background-color: #303949;
+    color: #ffffff;
+    padding-left: 120px;
+    position: relative;
+    font-family: serif;
+    margin: 0 auto;
+    word-wrap: break-word;
+}
+
+.conparison-chart h3::before {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 170px;
+    background-color: #beaf97;
+    left: 0;
+}
+
+
+/* about SECTION */
+.about {
+    width: 100%;
+}
+
+.about-title h2 {
+    text-align: center;
+}
+
+.about-list {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    color: #686868;
+}
+
+.about-list li {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+    padding-top: 10px;
+}
+
+.about-list ul {
+    display: block;
+}
+
+/* .about-list 内の dt と dd を横並びにする */
+.about-list dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.about-list dt {
+    flex: 0 0 40%;
+    /* dt 要素の幅を親要素の 30% に固定する  dt の幅を調整 */
+    padding-left: 30px;
+}
+
+.about-list dd {
+    flex: 1;
+    /* dd が残りの幅を占める flex-grow: 1;flex-shrink: 1;flex-basis: 0;*/
+    margin: 0;
+    word-break: break-all;
+    /* 長い単語やURLを折り返す */
+}
+
+
+.pictuture-box {
+    width: 100%;
+    height: 80vh;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.pictuture {
+    position: absolute;
+    width: 85%;
+    height: 55vh;
+    background: url(./img/pictuture.png) no-repeat center;
+    background-size: cover;
+    z-index: 1;
+    right: 60px;
+    padding: 0;
+}
+
+.pictuture-box::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 60px;
+    width: 85%;
+    height: 50vh;
+    background: #f3f3f3;
+    z-index: 0;
+}
+
+/* faq SECTION */
+.faq {
+    width: 100%;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.accordion-area {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.ac-title {
+    cursor: pointer;
+    padding: 20px;
+    margin: 0;
+    font-weight: 100;
+}
+
+.ac-title::before {
+    content: "＋";
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.ac-title.active::before {
+    content: "×";
+}
+
+.ac-box {
+    display: none; /* 初期状態では非表示 */
+    padding: 10px;
+    background-color: #f3f3f3;
+}
+
+
+/* フッター */
+footer {
+    border-top: 1px solid #000000;
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+footer p {
+    line-height: 4;
+    letter-spacing: 0.2em;
+}
+
+
+@media screen and (max-width: 900px) {
+    .pictuture {
+        position: absolute;
+        width: 80%;
+        height: 40vh;
+        right: 60px;
+        padding: 0;
+    }
+
+    .pictuture-box::before {
+        top: 10%;
+        left: 60px;
+        width: 80%;
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .pictuture-box {
+        height: 66vh;
+    }
+
+    .pictuture {
+        position: absolute;
+        width: 70%;
+        height: 40vh;
+        right: 30px;
+        padding: 0;
+    }
+
+    .pictuture-box::before {
+        top: 10%;
+        left: 30px;
+        width: 70%;
+        height: 40vh;
+    }
+}
+
+
+
+@media screen and (max-width: 830px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 468px) {
+    /* .main-visual::before { */
+    /* background-size: contain; */
+    /* 背景画像のサイズを調整 */
+    /* background-position: top;  */
+    /* 背景画像の位置を調整 */
+    /* height: 50vh;  */
+    /* 高さを調整 */
+    /* } */
+
+    .mv::before {
+        top: 40vh;
+        left: 20px;
+        font-size: 24px;
+    }
+}
