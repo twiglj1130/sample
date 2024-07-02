@@ -7,7 +7,7 @@ body {
   width: 100%;
   max-width: 1140px;
   margin: auto;
-    position: relative;
+  position: relative;
 }
 
 .product-lineup {
@@ -25,8 +25,8 @@ body {
 }
 
 /* .lineup img { */
-  /* 画像のクリック、ドラッグ無効化 */
-  /* pointer-events: none; */
+/* 画像のクリック、ドラッグ無効化 */
+/* pointer-events: none; */
 /* } */
 
 @media screen and (max-width: 768px) {
@@ -70,10 +70,11 @@ body {
 
   /* visibility: hidden; */
   /* height: 0; */
-/* cursor: grab; */
-/* opacity: 0; */
-/* transform: translateY(5%); */
+  /* cursor: grab; */
+  /* opacity: 0; */
+  /* transform: translateY(5%); */
 }
+
 .swiper-slide {
   /* display: flex; */
   /* display: none; */
@@ -91,10 +92,12 @@ body {
 .swiper-scrollbar-drag {
   background-color: #ccc;
 }
+
 .swiper-scrollbar {
   height: 20px !important;
   bottom: -24px !important;
 }
+
 /* .swiper-scrollbar.swiper-scrollbar-horizontal {
 } */
 
@@ -181,4 +184,18 @@ img.on-button {
     max-width: 100%;
     max-height: 100%;
   }
+}
+
+
+/* スマホ対策 */
+.swiper-3d .swiper-cube-shadow,
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-wrapper {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
