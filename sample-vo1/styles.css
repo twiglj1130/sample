@@ -1,0 +1,184 @@
+/* styles.css */
+body {
+  background-color: #db011c;
+}
+
+.product-set {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+    position: relative;
+}
+
+.product-lineup {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  margin: 0 auto;
+  /* color: #ffffff; */
+}
+
+.lineup {
+  width: calc(25% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* .lineup img { */
+  /* 画像のクリック、ドラッグ無効化 */
+  /* pointer-events: none; */
+/* } */
+
+@media screen and (max-width: 768px) {
+  .lineup {
+    width: calc(50% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/* .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  min-width: 200px;
+  height: 100%;
+  margin: 10px;
+  border: 1px solid #ccc;
+} */
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  /* 画像のクリック、ドラッグ無効化 */
+  /* pointer-events: none; */
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.product-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  /* スクロールバー用 */
+  /* position: relative; */
+
+  /* visibility: hidden; */
+  /* height: 0; */
+/* cursor: grab; */
+/* opacity: 0; */
+/* transform: translateY(5%); */
+}
+.swiper-slide {
+  /* display: flex; */
+  /* display: none; */
+  /* overflow: hidden; */
+  width: 100%;
+  visibility: hidden;
+  /* height: 0; */
+  cursor: grab;
+  opacity: 0;
+  transform: translateY(5%);
+  /* position: relative; */
+}
+
+/* 横スクロールバー */
+.swiper-scrollbar-drag {
+  background-color: #ccc;
+}
+.swiper-scrollbar {
+  height: 20px !important;
+  bottom: -24px !important;
+}
+/* .swiper-scrollbar.swiper-scrollbar-horizontal {
+} */
+
+
+/* active追加されたとき */
+/* .product-container.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+} */
+.swiper-slide.active {
+  /* display: flex; */
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+}
+
+/* やってみる */
+.swiper-wrapper {
+  /* overflow: hidden;
+  opacity: 0;
+  transform: translateY(5%);
+  position: relative; */
+  /* display: none; */
+  display: flex;
+}
+
+.swiper-wrapper.active {
+  /* visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s; */
+  display: flex;
+}
+
+
+img.off-button,
+img.on-button {
+  width: 100%;
+}
+
+/* 選択してない時（非active時）は赤背景 */
+img.off-button {
+  display: block;
+}
+
+img.on-button {
+  display: none;
+}
+
+/* 選択している時（active時）は白背景 */
+.active img.off-button {
+  display: none;
+}
+
+.active img.on-button {
+  display: block;
+}
+
+/* .swiper-slide.active product-img {
+  display: block;
+} */
+.swiper-slide {
+  display: none;
+}
+
+.swiper-slide.active {
+  display: flex;
+  /* transform: none; */
+  /* transform: translate3d(0, 0, 0); */
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    min-width: auto;
+    flex: 0 0 40%;
+  }
+
+  .product-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
