@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+  background-color: #db011c;
+}
+
+.product-set {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  position: relative;
+}
+
+.product-lineup {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.lineup {
+  width: calc(25% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 768px) {
+  .lineup {
+    width: calc(50% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+  }
+}
+
+
+.product-img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.product-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  visibility: hidden;
+  cursor: grab;
+  opacity: 0;
+  transform: translateY(5%);
+}
+
+/* 横スクロールバー */
+.swiper-scrollbar-drag {
+  background-color: #ccc;
+}
+
+.swiper-scrollbar {
+  height: 20px !important;
+  bottom: -24px !important;
+}
+
+.swiper-slide.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-wrapper.active {
+  display: flex;
+}
+
+
+img.off-button,
+img.on-button {
+  width: 100%;
+}
+
+/* 選択してない時（非active時）は赤背景 */
+img.off-button {
+  display: block;
+}
+
+img.on-button {
+  display: none;
+}
+
+/* 選択している時（active時）は白背景 */
+.active img.off-button {
+  display: none;
+}
+
+.active img.on-button {
+  display: block;
+}
+
+.swiper-slide {
+  display: none;
+}
+
+.swiper-slide.active {
+  display: flex;
+}
+
+.product-container::-webkit-scrollbar {
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+}
+.product-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
