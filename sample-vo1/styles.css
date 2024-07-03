@@ -174,17 +174,32 @@ img.on-button {
   /* transform: translate3d(0, 0, 0); */
 }
 
-@media screen and (max-width: 768px) {
-  .swiper-slide {
+/* @media screen and (max-width: 768px) { */
+  /* .swiper-slide {
     min-width: auto;
     flex: 0 0 40%;
-  }
+  } */
 
-  .product-img {
+  /* .product-img {
     max-width: 100%;
     max-height: 100%;
+  } */
+
+  /* スマホ対策 　　成功！！！？*/
+  /* .product-container {
+    overflow-x: scroll;
+  } */
+  /* .product-container::-webkit-scrollbar {
+    background: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
   }
-}
+  .product-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 20px;
+  } */
+/* } */
 
 
 /* スマホ対策 */
@@ -198,4 +213,16 @@ img.on-button {
 .swiper-3d .swiper-wrapper {
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+}
+
+
+.product-container::-webkit-scrollbar {
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+}
+.product-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
 }

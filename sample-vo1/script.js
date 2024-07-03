@@ -1,7 +1,7 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.product-container', {
-    slidesPerView: 4, // 表示されるスライドの数を1に設定
+    // slidesPerView: 4, // 表示されるスライドの数を1に設定
     spaceBetween: 10, // スライド間のスペースを10ピクセルに設定
     freeMode: {
       enabled: true, // フリーモードを有効にする（スライドがスナップしない）
@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.swiper-scrollbar',
       draggable: true, //ドラッグ操作を有効にする
     },
+    // スライドの表示枚数：768px未満の場合
+    slidesPerView: 2.3,
+    breakpoints: {
+      // スライドの表示枚数：768px以上の場合
+      768: {
+        slidesPerView: 4,
+      },
+    },
+    touchEventsTarget: 'container',//iPhoneでスクロールしないため
   });
 });
 
@@ -81,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (swiperSlide.classList.contains('active')) {
             swiperSlide.classList.remove('active');
             swiperSlide.style.display = 'none';
+
+
             // swiperSlide.style.transform = 'none';
           } else {
             swiperSlide.style.display = 'flex';
