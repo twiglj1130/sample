@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 
 <head>
     <meta charset="UTF-8">
@@ -14,8 +14,14 @@
 </head>
 
 <body>
+    <div id="splash">
+        <div id="splash-logo">PROGRAMMING ACTIVITY</div>
+        <!--/splash-->
+    </div>
+    <div class="splashbg"></div><!---画面遷移用-->
+    <div id="container">
     <header>
-        <h1>PROGRAMMING ACTIVITY</h1>
+        <h1><a href="#" onclick="location.reload()">PROGRAMMING ACTIVITY</a></h1>
         <nav>
             <ul>
                 <li><a href="#VISION">VISION</a></li>
@@ -26,8 +32,19 @@
             </ul>
         </nav>
     </header>
-    <div class="menu-icon">
-        <p>MENU</p>
+    <div class="menu-icon openbtn1">
+        <p>MENU</p><span></span><span></span><span></span>
+    </div>
+    <div class="open">
+        <div class="menu-list">
+            <ul>
+                <li><a class="open-text" href="#VISION">VISION</a></li>
+                <li><a class="open-text" href="#SERVICE">SERVICE</a></li>
+                <li><a class="open-text" href="#ABOUT">ABOUT</a></li>
+                <li><a class="open-text" href="#FAQ">FAQ</a></li>
+                <li>TEL:080-6661-1109</li>
+            </ul>
+        </div>
     </div>
     <div class="menu-list">
         <ul>
@@ -35,7 +52,7 @@
             <li><a href="#SERVICE">SERVICE</a></li>
             <li><a href="#ABOUT">ABOUT</a></li>
             <li><a href="#FAQ">FAQ</a></li>
-            <li>TEL:080-6661-1109</li>
+            <!-- <li>TEL:080-6661-1109</li> -->
         </ul>
     </div>
     <div class="main-visual">
@@ -197,7 +214,9 @@
         </div>
     </div>
     <section id="FAQ" class="faq">
-        <h2>FAQ</h2>
+        <div class="about-title">
+            <h2>FAQ</h2>
+        </div>
         <div class="accordion-area">
             <div class="accordion-item">
                 <p class="ac-title">HP制作費用の相場は50万円以上なのに、なぜ月額1万円でできるのですか？</p>
@@ -254,6 +273,7 @@
         <p>PROGRAMMING ACTIVITY</p>
         <p>© Programming Activity</p>
     </footer>
+</div>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- スクリプトファイル -->
