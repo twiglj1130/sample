@@ -9,16 +9,11 @@ $(document).ready(function () {
         if (scrollTop > showOffset) {
             // 200pxより下にスクロールした場合
             $footer.css('bottom', '0');
-            // $openbtn1.css('bottom', '110%');
-            $openbtn1.addClass('a');
-            setTimeout(function () {
-                $openbtn1.addClass('scrolled');
-            }, 100);
+            $openbtn1.addClass('scrolled scrolled');
         } else {
             // 200px以内の場合
             $footer.css('bottom', '-55px');
-            $openbtn1.removeClass('a');
-            $openbtn1.removeClass('scrolled');
+            $openbtn1.removeClass('a scrolled');
         }
     });
 
@@ -71,8 +66,8 @@ $(document).ready(function () {
             pauseOnFocus: false,         // フォーカス時に一時停止しない
             initialDelay: 800,           // 初期遅延（800ms後に自動再生開始）
             cssEase: 'linear',           // リニアなイージングを使用
-            // draggable: false,            // ドラッグによる切り替えを無効化
-            // swipe: true,                 // スワイプ（クリック）による切り替えを有効化
+            draggable: false,            // ドラッグによる切り替えを無効化
+            swipe: true,                 // スワイプ（クリック）による切り替えを有効化
             touchThreshold: 10,          // タッチ（クリック）の感度を高く設定
             clickToChange: true,         // クリックによる切り替えを明示的に有効化
         });
@@ -180,7 +175,7 @@ $(document).ready(function () {
     }
 
     // アニメーション遅延なしver
-    function animateFadeInNoDelaye() {
+    function animateFadeInNoDelay() {
         const scrollAmount = $(window).scrollTop();
         const windowHeight = $(window).height();
         $('.fade_in_animate_y3').each(function () {
@@ -192,20 +187,21 @@ $(document).ready(function () {
         });
     }
 
-    // ９つのカラム用対策
+    // ビューポートに入ったら子要素のすべてのアニメーションを開始
+    // ９つのカラム用対策と疾患の紹介一覧ページの３カラムのアニメーション遅延が遅い対策
     function animateFadeInDelayed9Columns() {
         const scrollAmount = $(window).scrollTop();
         const windowHeight = $(window).height();
-        
-        $('.treatment_grid').each(function() {
+
+        $('.treatment_grid, .symptom_container').each(function () {
             const $grid = $(this);
             const gridPosition = $grid.offset().top;
-            
+
             if (scrollAmount > gridPosition - windowHeight + 10) {
-                $grid.find('.fade_in_animate_9grid').each(function(index) {
+                $grid.find('.fade_in_animate_9grid').each(function (index) {
                     const $element = $(this);
                     if (!$element.hasClass('fade_in')) {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $element.addClass('fade_in');
                         }, 200 * index);
                     }
@@ -232,7 +228,7 @@ $(document).ready(function () {
         animateSlideIn();
         animateFadeIn();
         animateFadeInDelayed();
-        animateFadeInNoDelaye();
+        animateFadeInNoDelay();
         animateFadeInOnly();
         animateFadeInDelayed9Columns();
     }
