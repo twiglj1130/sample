@@ -7,10 +7,19 @@
 body {
     font-family: 'Noto Sans JP', 'Inter', sans-serif;
     color: #333333;
-    /* background-color: #FFFFFF; */
-    background-image: url('./img/background_texture.png');
-    background-size: cover;
     overflow-x: hidden;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(./img/background_texture.png);
+    background-size: cover;
+    background-position: center center;
 }
 
 p,
@@ -931,6 +940,7 @@ nav ul {
     border-radius: 15px;
     padding: 20px;
     margin: 20px;
+    overflow: hidden;
 }
 
 .catch_copy {

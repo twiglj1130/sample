@@ -192,12 +192,13 @@ $(document).ready(function () {
         });
     }
 
-    // ９つのカラム用対策
+    // ビューポートに入ったら子要素のすべてのアニメーションを開始
+    // ９つのカラム用対策と疾患の紹介一覧ページの３カラムのアニメーション遅延が遅い対策
     function animateFadeInDelayed9Columns() {
         const scrollAmount = $(window).scrollTop();
         const windowHeight = $(window).height();
         
-        $('.treatment_grid').each(function() {
+        $('.treatment_grid, .symptom_container').each(function() {
             const $grid = $(this);
             const gridPosition = $grid.offset().top;
             
