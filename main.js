@@ -71,8 +71,8 @@ $(document).ready(function () {
             pauseOnFocus: false,         // フォーカス時に一時停止しない
             initialDelay: 800,           // 初期遅延（800ms後に自動再生開始）
             cssEase: 'linear',           // リニアなイージングを使用
-            // draggable: false,            // ドラッグによる切り替えを無効化
-            // swipe: true,                 // スワイプ（クリック）による切り替えを有効化
+            draggable: false,            // ドラッグによる切り替えを無効化
+            swipe: true,                 // スワイプ（クリック）による切り替えを有効化
             touchThreshold: 10,          // タッチ（クリック）の感度を高く設定
             clickToChange: true,         // クリックによる切り替えを明示的に有効化
         });
