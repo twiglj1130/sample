@@ -9,16 +9,11 @@ $(document).ready(function () {
         if (scrollTop > showOffset) {
             // 200pxより下にスクロールした場合
             $footer.css('bottom', '0');
-            // $openbtn1.css('bottom', '110%');
-            $openbtn1.addClass('a');
-            setTimeout(function () {
-                $openbtn1.addClass('scrolled');
-            }, 100);
+            $openbtn1.addClass('scrolled scrolled');
         } else {
             // 200px以内の場合
             $footer.css('bottom', '-55px');
-            $openbtn1.removeClass('a');
-            $openbtn1.removeClass('scrolled');
+            $openbtn1.removeClass('a scrolled');
         }
     });
 
@@ -197,16 +192,16 @@ $(document).ready(function () {
     function animateFadeInDelayed9Columns() {
         const scrollAmount = $(window).scrollTop();
         const windowHeight = $(window).height();
-        
-        $('.treatment_grid, .symptom_container').each(function() {
+
+        $('.treatment_grid, .symptom_container').each(function () {
             const $grid = $(this);
             const gridPosition = $grid.offset().top;
-            
+
             if (scrollAmount > gridPosition - windowHeight + 10) {
-                $grid.find('.fade_in_animate_9grid').each(function(index) {
+                $grid.find('.fade_in_animate_9grid').each(function (index) {
                     const $element = $(this);
                     if (!$element.hasClass('fade_in')) {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $element.addClass('fade_in');
                         }, 200 * index);
                     }
