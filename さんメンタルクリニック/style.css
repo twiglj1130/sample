@@ -109,6 +109,18 @@ a {
     transform: translateY(0px);
 }
 
+/* ９カラム用のフェイドイン */
+.fade_in_animate_9grid {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.fade_in_animate_9grid.fade_in {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 /* アニメーション遅延なしver */
 .fade_in_animate_y3 {
     opacity: 0;
@@ -122,12 +134,12 @@ a {
 }
 
 /* セクションロゴはフェイドインのみ */
-.section_logo_box.fade_in_animate_y3 {
+.fade_in_only {
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: opacity 1.7s;
 }
 
-.section_logo_box.fade_in_animate_y3.fade_in {
+.fade_in_only.fade_in {
     opacity: 1;
 }
 
@@ -678,7 +690,8 @@ nav ul {
     padding: 10px;
     max-width: 300px;
     width: 100%;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out , opacity 1.7s;
+    z-index: 1;
 }
 
 .symptom_cta_button:hover {
@@ -1220,7 +1233,8 @@ nav ul {
 
 /*=============== faq_page　よくある質問 ===============*/
 /* 疾患ページのみロゴを葉っぱにして大きく */
-#faq_page .section_logo {
+#faq_page .section_logo,
+#first_visit_page .first_visit_img {
     max-width: 70px;
 }
 

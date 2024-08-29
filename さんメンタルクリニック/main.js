@@ -48,7 +48,7 @@ $(document).ready(function () {
     function closeMenu() {
         const $openElement = $('.open');
         const $menuIcon = $('.menu-icon');
-        
+
         // $openElement.removeClass('menu-open');
         // $menuIcon.removeClass('active');
         $openElement.css('transform', 'translateY(100%)');
@@ -169,9 +169,12 @@ $(document).ready(function () {
             const $element = $(this);
             const position = $element.offset().top;
             if (scrollAmount > position - windowHeight + 10) {
-                setTimeout(function () {
-                    $element.addClass('fade_in');
-                }, 200 * index);
+                // クラス付与の重複防止：既に fade_in クラスが付与されている要素をスキップ
+                if (!$element.hasClass('fade_in')) {
+                    setTimeout(function () {
+                        $element.addClass('fade_in');
+                    }, 200 * index);
+                }
             }
         });
     }
@@ -184,7 +187,42 @@ $(document).ready(function () {
             const $element = $(this);
             const position = $element.offset().top;
             if (scrollAmount > position - windowHeight + 10) {
-                    $element.addClass('fade_in');
+                $element.addClass('fade_in');
+            }
+        });
+    }
+
+    // ９つのカラム用対策
+    function animateFadeInDelayed9Columns() {
+        const scrollAmount = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        
+        $('.treatment_grid').each(function() {
+            const $grid = $(this);
+            const gridPosition = $grid.offset().top;
+            
+            if (scrollAmount > gridPosition - windowHeight + 10) {
+                $grid.find('.fade_in_animate_9grid').each(function(index) {
+                    const $element = $(this);
+                    if (!$element.hasClass('fade_in')) {
+                        setTimeout(function() {
+                            $element.addClass('fade_in');
+                        }, 200 * index);
+                    }
+                });
+            }
+        });
+    }
+
+    // フェイドインだけの記述を追加
+    function animateFadeInOnly() {
+        const scrollAmount = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        $('.fade_in_only').each(function () {
+            const $element = $(this);
+            const position = $element.offset().top;
+            if (scrollAmount > position - windowHeight + 10) {
+                $element.addClass('fade_in');
             }
         });
     }
@@ -195,62 +233,12 @@ $(document).ready(function () {
         animateFadeIn();
         animateFadeInDelayed();
         animateFadeInNoDelaye();
+        animateFadeInOnly();
+        animateFadeInDelayed9Columns();
     }
 
     // ページロード時とスクロール時に実行
-    // $(document).ready(function () {
-        runAllAnimations(); // ページロード時に実行
-        $(window).on('scroll', runAllAnimations); // スクロール時に実行
-    // });
-
-
-    // // タイトルを左からスライドイン
-    // $(window).on('scroll', function () {
-    //     const scrollAmount = $(window).scrollTop();
-    //     const windowHeight = $(window).height();
-    //     $('.fade_in_animate_x').each(function (index) {
-    //         const $element = $(this);
-    //         const position = $element.offset().top;
-    //         if (scrollAmount > position - windowHeight + 100) {
-    //                 $element.addClass('fade_in');
-    //         }
-    //     });
-    // });
-
-    // // スクロールしたときに遅延させてフェードイン
-    // function animateElements() {
-    //     const scrollAmount = $(window).scrollTop();
-    //     const windowHeight = $(window).height();
-    //     $('.fade_in_animate_y').each(function (index) {
-    //         const $element = $(this);
-    //         const position = $element.offset().top;
-    //         if (scrollAmount > position - windowHeight + 100) {
-    //             setTimeout(function () {
-    //                 $element.addClass('fade_in');
-    //             }, 200 * index);
-    //         }
-    //     });
-    // }
-
-    // // ページロード時とスクロール時に実行
-    // $(document).ready(function() {
-    //     animateElements(); // ページロード時に実行
-    //     $(window).on('scroll', animateElements); // スクロール時に実行
-    // });
-
-    // // スクロールしたときに遅延させてフェードイン　アニメーション遅延が被らないようにもう一つ設定
-    // $(window).on('scroll', function () {
-    //     const scrollAmount = $(window).scrollTop();
-    //     const windowHeight = $(window).height();
-    //     $('.fade_in_animate_y2').each(function (index) {
-    //         const $element = $(this);
-    //         const position = $element.offset().top;
-    //         if (scrollAmount > position - windowHeight + 10) {
-    //             setTimeout(function () {
-    //                 $element.addClass('fade_in');
-    //             }, 200 * index);
-    //         }
-    //     });
-    // });
+    runAllAnimations(); // ページロード時に実行
+    $(window).on('scroll', runAllAnimations); // スクロール時に実行
 
 });
