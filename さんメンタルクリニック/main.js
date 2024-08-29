@@ -25,6 +25,9 @@ $(document).ready(function () {
     // モバイルボタン動作
     $('.openbtn1, .open-text').click(toggleTransform);
 
+    // メニュー内のaタグをクリックしたときにメニューを閉じる
+    $('.open a').click(closeMenu);
+
     // トランスフォームを切り替える関数
     function toggleTransform() {
         const openElement = $('.open'); // .open要素を取得
@@ -40,6 +43,16 @@ $(document).ready(function () {
             menuIcon.addClass('active');
         }
     };
+
+    // メニューを閉じる関数
+    function closeMenu() {
+        const $openElement = $('.open');
+        const $menuIcon = $('.menu-icon');
+        
+        // $openElement.removeClass('menu-open');
+        // $menuIcon.removeClass('active');
+        $openElement.css('transform', 'translateY(100%)');
+    }
 
     // スライドショー
     // TOPページの場合、以下の処理を実行

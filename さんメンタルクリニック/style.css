@@ -302,7 +302,11 @@ nav ul {
 
 .mobile_nav_item a {
     color: #fff;
-    /* text-decoration: none; */
+    display: block;
+}
+
+.mobile_nav_item a:hover {
+    background-color: #D9D9D9;
 }
 
 .mobile_nav_img.first_img {
