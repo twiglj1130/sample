@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プラスフィール</title>
+    <!-- クリティカルCSS（インライン） -->
+    <style>
+        /* 重要なスタイル */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* メインコンテンツ幅 */
+        .main-container {
+            max-width: 750px;
+            width: 100%;
+            margin: 0 auto;
+            overflow-x: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ヘッダー */
+        .header {
+            display: flex;
+            padding: 10px 5px;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header h1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .header div {
+            flex: 2;
+            text-align: center;
+        }
+
+        .site-logo {
+            max-width: 134px;
+            height: 58px;
+        }
+    </style>
+
+    <!-- 非クリティカルCSSのプリロード -->
+    <link rel="preload" href="non-critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="non-critical.css">
+    </noscript>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/aur7bpz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="non-critical.css">
+</head>
+
+<body>
+    <header class="header main-container">
+        <h1 class="header-title">
+            <img class="site-logo" src="./img/logo.webp" alt="プラスフィールのロゴ">
+        </h1>
+        <div class="cta-button-container">
+            <a href="#" class="header-cta-button">
+                <img src="./img/header-cta-button.webp" alt="CTAボタン">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div>
+                <img src="./img/feel.webp" alt="メインビジュアル画像">
+            </div>
+
+            <section class="campaign-section">
+                <div class="campaign-container">
+                    <h2 class="catch-copy"> <span class="marker">1回でも変化を実感！</span></h2>
+                    <p class="campaign-title">小顔矯正×骨盤矯正</p>
+                    <p class="campaign-title space-bottom">初回キャンペーン</p>
+
+                    <div class="offer-container">
+                        <div class="before-after">
+                            <img src="./img/ba.webp" alt="ビフォーアフター画像">
+                        </div>
+
+                        <div class="offer-details">
+                            <div class="offer-headline">
+                                <p class="offer-text-underline marker">本格小顔ケアを気軽に始められる</p>
+                                <p class="offer-text">初回特別価格！</p>
+                            </div>
+
+                            <div class="offer-services">
+                                <p class="service">カウンセリング</p>
+                                <p class="separator">×</p>
+                                <p class="service">小顔矯正</p>
+                                <p class="separator">×</p>
+                                <p class="service">骨盤矯正</p>
+                            </div>
+
+                            <div class="price-info">
+                                <div class="regular-price-item">
+                                    <p class="regular-price">通常価格</p>
+                                    <p class="strikethrough">10,000<span class="small-font">円</span></p>
+                                </div>
+                                <p class="service">初回限定価格</p>
+                                <div class="discount-info">
+                                    <div class="discount-clip">
+                                        <p class="discount-percentage">52<span class="small-font">%</span></p>
+                                        <p class="discount-off-text">OFF</p>
+                                    </div>
+                                    <p class="discounted-price">4,800<span class="small-font">円</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="note">※店舗によって初回限定価格が異なる場合がございます。ご了承ください。</p>
+
+                        <div class="reservation-info">
+                            <p class="reservation-text"><span class="out-font first">\</span><span
+                                    class="font">\</span>ホットペッパービューティーから簡単予約！<span class="font">/</span><span
+                                    class="out-font second">/</span></p>
+                        </div>
+
+                        <a href="#">
+                            <img src="./img/button01.webp" alt="近くの他の店舗を予約する ▶">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="concerns-container">
+                <div class="concerns-box">
+                    <h2 class="concerns-title">こんなお悩み<br>ありませんか？</h2>
+                </div>
+                <div class="concerns-list">
+                    <div class="concern-item">
+                        <img class="concern-img" src="./img/concern01.webp" alt="お悩み01">
+                        <div class="concern-text-box">
+                            <p class="concern-text">年齢のせいで<span class="concern-emphasis">顔が浮腫み<br>やすくなった</span>気がする</p>
+                        </div>
+                    </div>
+                    <div class="concern-item reverse">
+                        <img class="concern-img" src="./img/concern02.webp" alt="お悩み02">
+                        <div class="concern-text-box">
+                            <p class="concern-text">顔のむくみ、たるみ、歪みの<br>せいで<span class="concern-emphasis">大きく見えてしまう</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="concern-item">
+                        <img class="concern-img" src="./img/concern03.webp" alt="お悩み03">
+                        <div class="concern-text-box">
+                            <p class="concern-text">家族に姿勢が悪いと<br><span class="concern-emphasis">言われるようになった</span></p>
+                        </div>
+                    </div>
+                    <div class="concern-item reverse">
+                        <img class="concern-img" src="./img/concern04.webp" alt="お悩み04">
+                        <div class="concern-text-box">
+                            <p class="concern-text">エステに通っているけど<br><span class="concern-emphasis">変化を感じない</span></p>
+                        </div>
+                    </div>
+                    <div class="concern-item">
+                        <img class="concern-img" src="./img/concern05.webp" alt="お悩み05">
+                        <div class="concern-text-box">
+                            <p class="concern-text">小顔のセルフマッサージ<br>を続けているけど、<br><span
+                                    class="concern-emphasis">変化を感じない</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="conclusion">
+                <p class="conclusion-title">いろんなケアを試してはいるけど
+                </p>
+                <p class="conclusion-text">
+                    <span class="conclusion-text-marker marker">年齢よりも見た目が</span>
+                </p>
+                <p class="conclusion-text">
+                    <span class="conclusion-text-marker marker">老けて見える....</span>
+                </p>
+            </div>
+
+            <section class="treatment-container">
+                <div class="triangle-pattern"></div>
+                <div class="treatment-box">
+                    <div class="treatment-intro">
+                        <h2 class="treatment-text">このようなお悩みは</h2>
+                    </div>
+                </div>
+                <p class="treatment-description reservation-text"><span class="out-font first">\</span><span
+                        class="font">\</span>骨格・筋肉のプロ、国家資格者が考案した<span class="font">/</span><span
+                        class="out-font second">/</span></p>
+                <h3 class="treatment-brand sparkling">プラスフィールの</h3>
+                <div class="treatment-title-wrapper">
+                    <p class="treatment-title-left">小顔矯正</p>
+                    <p class="treatment-title-center">×</p>
+                    <p class="treatment-title-right">骨盤矯正</p>
+                </div>
+                <p class="treatment-trust sparkling">にお任せください!</p>
+                <div class="video-container l-r-padding20">
+                    <div class="video-placeholder">
+                        <p>施術動画</p>
+                    </div>
+                </div>
+                <p class="treatment-method-text l-r-padding20">小顔矯正×骨盤矯正を組み合わせた独自技術でカラダの土台から整えて<br>全身から小顔へ導きます。</p>
+                <div class="before-after l-r-padding20">
+                    <img src="./img/ba.webp" alt="ビフォーアフター画像">
+                </div>
+                <div class="treatment-details">
+                    <p>施術回数　○回</p>
+                    <p> 期間 　○ヶ月</p>
+                </div>
+            </section>
+
+            <section class="face-concerns">
+                <div class="face-container">
+                    <div class="face-concerns-box">
+                        <div class="moyamoya-box">
+                            <img class="face-concerns-img" src="./img/face-concerns.webp" alt="顔の悩みを持つ女性">
+                        </div>
+                    </div>
+                    <div class="face-concerns-list">
+                        <img src="./img/concerns-list.webp" alt="三つの悩み">
+                        <h2 class="face-concerns-title">このようなお顔の悩みは</h2>
+                        <div class="face-concerns-blur-box"></div>
+                        <div class="pink-triangle-pattern"></div>
+                    </div>
+                </div>
+                <div class="main-image">
+                    <div class="main-image-box">
+                        <img src="./img/woman01.webp" alt="顔の悩みを持つ女性">
+                    </div>
+                    <div class="main-image-box">
+                        <img class="main-img-2" src="./img/spine.webp" alt="側弯のある背骨">
+                    </div>
+                </div>
+                <div class="cause-section">
+                    <h3 class="cause-title">お顔の<span class="marker">血行不良とカラダの歪み</span>にあります。</h3>
+                </div>
+                <div class="body-connection">
+                    <div class="body-img-box">
+                        <div class="arrow">
+                            <div class="arrow-container">
+                                <div class="arrow-body"></div>
+                                <div class="arrow-head arrow-head-top"></div>
+                                <div class="arrow-head arrow-head-bottom"></div>
+                            </div>
+                        </div>
+                        <img class="main-img-2" src="./img/body.webp" alt="人体全体図">
+                    </div>
+                    <div>
+                        <p>人の身体は<br>頭から足先まで<br>すべて繋がっています。</p>
+                    </div>
+                </div>
+                <div class="treatment-limitation">
+                    <p>そのため、顔だけの施術では</p>
+                    <ul>
+                        <li>すぐに元に戻る</li>
+                        <li>変化がでづらい</li>
+                    </ul>
+                    <p>など、思ったような効果を<br>感じづらくなります。</p>
+                </div>
+                <div class="solution-box">
+                    <div class="solution">
+                        <p>小顔効果を最大限に感じていただきながら、<br>より効果を持続させるために</p>
+                    </div>
+                    <div class="solution-images">
+                        <img src="./img/treatment01.webp" alt="顔の施術">
+                        <img src="./img/treatment02.webp" alt="体の施術">
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment-method">
+                <h2 class="method-title">プラスフィールでは</h2>
+                <p class="method-description marker">「小顔矯正」と「骨盤矯正」を</p>
+                <p class="method-description marker">組み合わせた独自の美容施術を</p>
+                <p class="method-description marker">セットで行います！</p>
+                <h3 class="set-title">セットで行うことで</h3>
+                <div class="pink-triangle-box">
+                    <div class="pink-triangle-pattern"></div>
+                    <div class="pink-triangle-pattern"></div>
+                </div>
+                <div class="treatment-images solution-images">
+                    <div class="image-container">
+                        <img src="./img/set01.webp" alt="血流促進">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/set02.webp" alt="身体の歪み矯正">
+                    </div>
+                </div>
+                <div class="hexagon-box">
+                    <div class="hexagon">
+                        <div class="hexagon-content">
+                            <p class="image-caption">血流促進</p>
+                        </div>
+                    </div>
+                    <div class="hexagon">
+                        <div class="hexagon-content">
+                            <p class="image-caption">身体の歪み矯正</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="v-shape-container">
+                    <div class="v-shape"></div>
+                    <div class="v-shape-vertical"></div>
+                </div>
+
+                <div class="treatment-limitation">
+                    <p>同時に行うため、<br>
+                        お顔のだけの施術に比べて</p>
+                    <ul>
+                        <li>最大限の小顔効果</li>
+                        <li>小顔効果の持続</li>
+                    </ul>
+                    <p>といった効果に期待ができます！</p>
+                </div>
+            </section>
+
+            <section class="before-after-sction">
+                <h2 class="main-title">小顔矯正✕骨盤矯正で<br>左右対称のキレイな小顔に</h2>
+                <h3 class="subtitle">
+                    <span class="jp-title">ビフォーアフター</span>
+                    <span class="en-title">BEFORE&AFTER</span>
+                </h3>
+
+                <div class="result-item">
+                    <div class="before-after-images">
+                        <img src="./img/ba-2.webp" alt="Before-After">
+                    </div>
+                    <div class="treatment-info">
+                        <h4 class="result-title">お顔のむくみ解消</h4>
+                        <p>施術回数　○回</p>
+                        <p>期間 　○ヶ月</p>
+                    </div>
+                </div>
+
+                <div class="result-item">
+                    <div class="before-after-images">
+                        <img src="./img/ba-2.webp" alt="Before-After">
+                    </div>
+                    <div class="treatment-info">
+                        <h4 class="result-title">お顔の左右差矯正</h4>
+                        <p>施術回数　○回</p>
+                        <p>期間 　○ヶ月</p>
+                    </div>
+                </div>
+
+                <div class="result-item">
+                    <div class="before-after-images">
+                        <img src="./img/ba-2.webp" alt="Before-After">
+                    </div>
+                    <div class="treatment-info">
+                        <h4 class="result-title">エラ張り解消</h4>
+                        <p>施術回数　○回</p>
+                        <p>期間 　○ヶ月</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment-explanation">
+                <div class="explanation-solution">
+                    <h2 class="explanation-title">
+                        プラスフィールの<br>
+                        小顔矯正×骨盤矯正が<br>
+                        顔のむくみ・たるみ・歪みを<br>
+                        解消できる理由
+                    </h2>
+                </div>
+                <p class="qualification">
+                    プラスフィールの小顔矯正と骨盤矯正は<br>
+                    国家資格者【柔道整復師】だから考案できた
+                </p>
+                <div class="key-points">
+                    <span class="highlight">頭蓋骨</span>
+                    <span class="connector">と</span>
+                    <span class="highlight">筋膜</span>
+                </div>
+                <p class="approach">
+                    にアプローチする<br>
+                    小顔矯正と骨盤矯正です
+                </p>
+                <p class="marker approach-text">柔道整復師が専門分野から発展させた</p>
+                <p class="approach-text"><span class="marker">独自の小顔技術</span>だからこそ、</p>
+                <p class="marker approach-text">他の小顔矯正サロンや美容整体院では</p>
+                <p class="approach-text"><span class="marker">得られない効果を実感</span>いただけます！</p>
+                <div class="treatment-explanation-image">
+                    <img src="./img/treatment-explanation.webp" alt="施術の様子">
+                </div>
+            </section>
+
+            <section class="campaign-section">
+                <div class="campaign-container">
+                    <h2 class="catch-copy"> <span class="marker">1回でも変化を実感！</span></h2>
+                    <p class="campaign-title">小顔矯正×骨盤矯正</p>
+                    <p class="campaign-title space-bottom">初回キャンペーン</p>
+
+                    <div class="offer-container">
+                        <div class="before-after">
+                            <img src="./img/ba.webp" alt="ビフォーアフター画像">
+                        </div>
+
+                        <div class="offer-details">
+                            <div class="offer-headline">
+                                <p class="offer-text-underline marker">本格小顔ケアを気軽に始められる</p>
+                                <p class="offer-text">初回特別価格！</p>
+                            </div>
+
+                            <div class="offer-services">
+                                <p class="service">カウンセリング</p>
+                                <p class="separator">×</p>
+                                <p class="service">小顔矯正</p>
+                                <p class="separator">×</p>
+                                <p class="service">骨盤矯正</p>
+                            </div>
+
+                            <div class="price-info">
+                                <div class="regular-price-item">
+                                    <p class="regular-price">通常価格</p>
+                                    <p class="strikethrough">10,000<span class="small-font">円</span></p>
+                                </div>
+                                <p class="service">初回限定価格</p>
+                                <div class="discount-info">
+                                    <div class="discount-clip">
+                                        <p class="discount-percentage">52<span class="small-font">%</span></p>
+                                        <p class="discount-off-text">OFF</p>
+                                    </div>
+                                    <p class="discounted-price">4,800<span class="small-font">円</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="note">※店舗によって初回限定価格が異なる場合がございます。ご了承ください。</p>
+
+                        <div class="reservation-info">
+                            <p class="reservation-text"><span class="out-font first">\</span><span
+                                    class="font">\</span>ホットペッパービューティーから簡単予約！<span class="font">/</span><span
+                                    class="out-font second">/</span></p>
+                        </div>
+
+                        <a href="#">
+                            <img src="./img/button01.webp" alt="近くの他の店舗を予約する ▶">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment-continuity">
+                <h2 class="treatment-continuity-title">継続施術で<br>小顔効果がさらにアップ！<br>より長い持続効果！</h2>
+                <h3 class="treatment-continuity-sub-title">身体の仕組み上<br>1回の施術では持続しづらい</h3>
+
+                <div class="homeostasis-container">
+                    <div class="homeostasis-box">
+                        <div class="homeostasis-circle"></div>
+                        <p class="homeostasis-text">ホメオスタシス</p>
+                        <div class="homeostasis-img-box">
+                            <div class="homeostasis-img-item1">
+                                <img src="./img/treatment-04.webp" alt="効果を実感する女性">
+                                <p class="effect-text">効果を<br>実感！</p>
+                                <div class="step">1回目の施術</div>
+                            </div>
+                            <div class="homeostasis-img-item2">
+                                <img src="./img/treatment-03.webp" alt="姿勢が元に戻る">
+                                <div class="step">元に戻る</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <p class="explanation">
+                    人間のカラダには「ホメオスタシス」というシステムがあり、カラダの状態を一定に保とうとはたらきます。つまり、「普段の状態」に戻ろうとします。そのため、1回の施術で効果を実感できても、また元に戻ってしまうことがよくあります。
+                </p>
+
+                <h3 class="treatment-continuity-sub-title">身体の歪みは癖になっていて<br>いい状態が定着しづらい</h3>
+
+                <div class="treatment-image-container">
+                    <img src="./img/woman02.webp" alt="定着しづらいイメージ1">
+                    <img src="./img/woman03.webp" alt="定着しづらいイメージ2">
+                    <img src="./img/woman04.webp" alt="定着しづらいイメージ3">
+                </div>
+                <div class="pink-triangle-pattern"></div>
+                <p class="explanation">職場環境や生活環境によって、<br class="none-460">
+                    時間をかけて蓄積されて癖になった身体の歪みをたった一度の施術でいい状態を定着させるのは実際には難しいのが現実です。</p>
+                <p class="treatment-continuity-sub-title">最短最速で小顔になれて<br>いい状態を保つための来店頻度</p>
+
+                <div class="chart-container">
+                    <h2>理想の通院頻度</h2>
+                    <div class="chart">
+                        <div class="bar" style="height: 100%;">
+                            <span class="bar-text">月4回</span>
+                            <span class="bar-subtext">(週1回)</span>
+                        </div>
+                        <div class="bar" style="height: 75%;">
+                            <span class="bar-text">月3回</span>
+                            <span class="bar-subtext">(2週間に<br>1〜2回程度)</span>
+                        </div>
+                        <div class="bar" style="height: 50%;">
+                            <span class="bar-text">月2回</span>
+                            <span class="bar-subtext">(2週間に1回)</span>
+                        </div>
+                    </div>
+                    <div class="x-axis">
+                        <div class="x-label">1ヶ月目</div>
+                        <div class="x-label">2ヶ月目</div>
+                        <div class="x-label">3ヶ月目</div>
+                    </div>
+                </div>
+                <p class="explanation">通い始めは身体の歪みが強いクセとなっているため、あまり感覚を空けずに施術を受けていただくのが理想です。<br>
+                    繰り返し施術を受けていただくと、いい状態が長く続くようになるため、定着してきたタイミングで月1回程度の来店頻度で常にいい状態を保てるようになります。</p>
+                <p class="treatment-continuity-title">整体院とエステサロンの融合の<br>プラスフィールなら<br>時間とお金が節約できて通いやすい！</p>
+
+                <div class="chart-container2">
+                    <h2>業界相場とプラスフィールの価格比較</h2>
+                    <div class="total-price"><span class="chart-small-font">計</span>15,000<span
+                            class="chart-small-font">円 / 1回</span></div>
+                    <div class="gray-bar"></div>
+                    <div class="price-column industry-column">
+                        <div class="price">10,000<span class="chart-small-font">円</span>/1<span
+                                class="chart-small-font">回</span></div>
+                        <div class="chart-service">小顔矯正</div>
+                    </div>
+                    <div class="price-column industry-column-2">
+                        <div class="price">5,000<span class="chart-small-font">円</span>/1<span
+                                class="chart-small-font">回</span></div>
+                        <div class="chart-service">骨盤矯正</div>
+                    </div>
+                    <div class="price-column plusfeel-column">
+                        <div class="price">10,000<span class="chart-small-font">円</span>/1<span
+                                class="chart-small-font">回</span></div>
+                        <div class="chart-service">小顔矯正<br>&<br>骨盤矯正</div>
+                    </div>
+                    <div class="label industry-label">一般的な業回相場</div>
+                    <div class="label plusfeel-label">プラスフィール</div>
+                    <div class="discount-bubble">
+                        <div class="discount-text">5,000<span class="chart-small-font">円</span>も<br>お得！</div>
+                    </div>
+                    <div class="bottom-line"></div>
+                </div>
+                <p class="chart-text">骨盤矯正と小顔矯正を行おうとすると整体院とエステサロン両方に行かなくてはならないため通う回数・時間・お金といったコストがかかります。<br>
+                    プラスフィールではセットで行うことにより料金面や時間・手間を大幅に軽減できるため多くの患者様に喜びの声をいただいております。</p>
+            </section>
+
+            <section class="reason-section">
+                <p class="reason-en">REASON</p>
+                <img class="reason-img" src="./img/reason-sec.webp" alt="女性スタッフ">
+                <div class="reason-text-box">
+                    <h2 class="reason-title">プラスフィールが選ばれる</h2>
+                    <h3 class="reason-subtitle"><span class="out-fit-number">4</span>つの理由</h3>
+                </div>
+
+                <div class="reason-list">
+                    <div class="reason-item">
+                        <div class="reason-image">
+                            <span class="reason-number">01</span>
+                            <img src="./img/reason-number01.webp" alt="女性スタッフ">
+                        </div>
+                        <h4 class="reason-item-title">施術スタッフは全員女性で安心！<br>業界最高水準の採用基準をクリアしたスタッフが対応致します</h4>
+                        <p class="reason-description">
+                            プラスフィールではお客様に安心していただけるよう日本全国からエステサロンや整体院での実務経験のある女性を厳選し採用しています。よくある整体院では男性スタッフの施術が多く、悩みやこだわりを伝えれないとのお声をよくお聞きします。そんなお悩みに寄り添うプラスフィールは女性のお客様に大満足の評価をいただいております。
+                        </p>
+                    </div>
+
+                    <div class="reason-item reverse">
+                        <div class="reason-image">
+                            <span class="reason-number">02</span>
+                            <img src="./img/reason-number02.webp" alt="施術の様子">
+                        </div>
+                        <h4 class=" reason-item-title">国家資格者も学びに来る！<br>今までにない「小顔矯正」と<br>「骨盤矯正」を組み合わせた美容整体</h4>
+                        <p class="reason-description">
+                            プラスフィールでは従来の美容整体とは異なり『小顔矯正』と『骨盤矯正』を兼ね備えた今までにない美容整体です。その効果が認められ、プラスフィールの独自の技術を学びに来る国家資格者も多いほどです。業界全体の技術向上に努めています。
+                        </p>
+                    </div>
+
+                    <div class="reason-item">
+                        <div class="reason-image">
+                            <span class="reason-number">03</span>
+                            <img src="./img/reason-number03.webp" alt="YouTube登録者数">
+                        </div>
+                        <h4 class=" reason-item-title">YouTube登録者数100万以上！<br>総裁数◯回以上の<br>小顔術が受けられる！</h4>
+                        <p class="reason-description">
+                            プラスフィール代表の内山が運営するYouTubeチャンネル「美容整体のうちやま先生。」は登録者数100万人以上、総再生数は◯人以上と、プラスフィールの小顔術はSNS上でも多くの方に認めらました。厳しい研修とテストをクリアした確かな技術を持つスタッフの手で施術を受けていただけます。
+                        </p>
+                    </div>
+
+                    <div class="reason-item reverse">
+                        <div class="reason-image">
+                            <span class="reason-number">04</span>
+                            <img src="./img/reason-number04.webp" alt="施術の効果">
+                        </div>
+                        <h4 class=" reason-item-title">骨格・筋肉のプロが考案した施術でしっかり効果を実感できて、身体に優しいから安心できる</h4>
+                        <p class="reason-description">
+                            プラスフィール代表の内山は国家資格である柔道整復師です。骨格と筋肉のプロである柔道整復師が考案した、独自の技術のためしっかりと効果を実感いただけます。また、身体に負担のかかららない優しい施術のため痛みも少なく、後遺症などのリスクもありません。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="method-section">
+                <div class="method-container">
+                    <div class="method-box">
+                        <div class="crown">
+                            <div class="crown-item">
+                                <img src="./img/crown01.webp" alt="月桂樹" class="laurel-left">
+                                <div class="text-container">
+                                    <p class="crown-title">YouTube登録者数</p>
+                                    <p class="subscribers"><span class="big-font">100</span>万人超え！</p>
+                                </div>
+                                <img src="./img/crown02.webp" alt="月桂樹" class="laurel-right">
+                            </div>
+                            <div class="crown-item">
+                                <img src="./img/crown01.webp" alt="月桂樹" class="laurel-left">
+                                <div class="text-container">
+                                    <p class="crown-title"> YouTube総再生数</p>
+                                    <p class="subscribers"><span class="big-font">1.9</span>億回！</p>
+                                </div>
+                                <img src="./img/crown02.webp" alt="月桂樹" class="laurel-right">
+                            </div>
+                        </div>
+                        <div class="method-person">
+                            <img src="./img/person.webp" alt="賞を獲得する代表">
+                        </div>
+                    </div>
+                    <div class="bg-white">
+                        <p class="treatment-description reservation-text"><span class="out-font first">\</span><span
+                                class="font">\</span>プラスフィールの施術メソッド！<span class="font">/</span><span
+                                class="out-font second">/</span></p>
+                        <div class="video-container l-r-padding20">
+                            <div class="video-placeholder">
+                                <p>一番伸びたYouTube埋め込み</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voice-section">
+                <div class="voice-title">
+                    <p class="voice-en">VOICE</p>
+                    <p class="voice-jp">お客様の声</p>
+                </div>
+                <div class="video-container l-r-padding20">
+                    <div class="video-placeholder">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="video-container l-r-padding20">
+                    <div class="video-placeholder">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="video-container l-r-padding20">
+                    <div class="video-placeholder">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="flow-section">
+                <div class="voice-title">
+                    <p class="voice-en">FLOW</p>
+                    <p class="voice-jp">施術の流れ</p>
+                </div>
+
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>01</h2>
+                    <img src="./img/step-01.webp" alt="ステップ1">
+                    <p class="step-title">ご予約</p>
+                    <div class="step-text-box">
+                        <p class="step-text">プラスフィールは完全予約制です。<br>Webやお電話からご予約ください。</p>
+                    </div>
+                    <img src="./img/reserve-web.webp" alt="Webからご予約ください。">
+                    <img src="./img/reserve-mail.webp" alt="メールからご予約ください。">
+                    <div class="circle-container first"></div>
+                </div>
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>02</h2>
+                    <img src="./img/step-02.webp" alt="ステップ2">
+                    <p class="step-title">ご来店</p>
+                    <div class="step-text-box">
+                        <p class="step-text">ご予約日時にお越しいただき、<br>受付をお済ませください。</p>
+                    </div>
+                    <div class="circle-container"></div>
+                </div>
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>03</h2>
+                    <img src="./img/step-03.webp" alt="ステップ3">
+                    <p class="step-title">カウンセリング</p>
+                    <div class="step-text-box">
+                        <p class="step-text">女性スタッフがカウンセリングを行います。細部へのこだわりもご遠慮なく仰ってください。</p>
+                    </div>
+                    <div class="circle-container"></div>
+                </div>
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>04</h2>
+                    <img src="./img/step-04.webp" alt="ステップ4">
+                    <p class="step-title">骨盤矯正</p>
+                    <div class="step-text-box">
+                        <p class="step-text">背骨や肩甲骨、骨盤など全身の矯正を行います。</p>
+                    </div>
+                    <div class="circle-container"></div>
+                </div>
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>05</h2>
+                    <img src="./img/step-05.webp" alt="ステップ5">
+                    <p class="step-title">小顔矯正</p>
+                    <div class="step-text-box">
+                        <p class="step-text">頭蓋骨周りの筋膜を緩めることで、<br>肌に触れずに顔の歪みを整えます。</p>
+                    </div>
+                    <div class="circle-container"></div>
+                </div>
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>06</h2>
+                    <img src="./img/step-07.webp" alt="ステップ6">
+                    <p class="step-title">お悩み別オプション</p>
+                    <div class="step-text-box">
+                        <p class="step-text">頭蓋骨周りの筋膜を緩めることで、<br>肌に触れずに顔の歪みを整えます。</p>
+                    </div>
+                    <div class="circle-container"></div>
+                </div>
+                <div class="step-container">
+                    <h2 class="step-number"><span class="step-small-font">STEP</span>07</h2>
+                    <img src="./img/step-07.webp" alt="ステップ7">
+                    <p class="step-title">効果の確認</p>
+                    <div class="step-text-box">
+                        <p class="step-text">体験後の効果をご確認いただきます。<br>効果を維持するためのセルフケアもお伝え致します。</p>
+                    </div>
+                    <div class="circle-container"></div>
+                </div>
+            </section>
+
+            <section class="store-info-section">
+                <div class="store-info">
+                    <h2 class="store-name">五反田店</h2>
+
+                    <div class="map-container">
+                        <div class="map-placeholder"><iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12972.413469452978!2d139.70966876041544!3d35.625178161682584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bd7c570f10d%3A0x65fde800e6e6259c!2z6LGK5LiJIOilv-S6lOWPjeeUsOODj-OCpOODhA!5e0!3m2!1sja!2sjp!4v1725546363316!5m2!1sja!2sjp"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+
+                    <span class="women-only">女性専用</span>
+
+                    <address class="store-address">
+                        東京都品川区西五反田2-13-5<br>
+                        豊三西五反田ハイツ803
+                    </address>
+
+                    <dl class="store-details">
+                        <div class="detail-item">
+                            <dt>アクセス/駐車場：</dt>
+                            <dd>五反田駅徒歩3分/なし</dd>
+                        </div>
+                        <div class="detail-item">
+                            <dt>営業時間：</dt>
+                            <dd>10:30～21:00</dd>
+                        </div>
+                        <div class="detail-item">
+                            <dt>電話番号：</dt>
+                            <dd>03-6420-0088</dd>
+                        </div>
+                        <div class="detail-item">
+                            <dt>初回価格：</dt>
+                            <dd>4,800円</dd>
+                        </div>
+                    </dl>
+
+                    <div class="reservation-buttons">
+                        <a href="#"><img src="./img/store-btn1.webp" alt="ホットペッパーから予約する"></a>
+                        <a href="#"><img src="./img/store-btn2.webp" alt="LINEから予約する"></a>
+                        <a href="#"><img src="./img/button01.webp" alt="近くの他の店舗を探す"></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <h2 class="strengths-reason-title">よくある質問</h2>
+                <div class="accordion-item">
+                    <p class="ac-title">痛みはありますか？</p>
+                    <div class="ac-box">
+                        <p>プラスフィールでは、痛みのない小顔矯正と骨盤矯正を提供しています。万が一、気持よさのない痛みを感じた場合はすぐにスタッフお申し付けください。「痛みを我慢した方が効く」ことはありませんので我慢をする必要はありません。
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <p class="ac-title">何回くらい通ったらいいですか？</p>
+                    <div class="ac-box">
+                        <p>1回でも歪みがよくなる方もいらっしゃいます。より効果を実感し、効果を維持させたい場合は、10回程度の施術がおすすめです。</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <p class="ac-title">効果を維持できますか？</p>
+                    <div class="ac-box">
+                        <p>施術を受ければ受けるほど歪みが整い、効果を維持できます。また、セルフケアを行うことでも効果が持続されます。</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <p class="ac-title">メイクはしたままで大丈夫ですか？</p>
+                    <div class="ac-box">
+                        <p>はい。メイクをしたままで施術をお受けいただけます。</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <p class="ac-title">妊娠中ですが施術を受けられますか？</p>
+                    <div class="ac-box">
+                        <p>妊娠が判明したときから出産後2ヶ月までは施術を控えていただいております。妊娠の可能性があると思われる患者様は、一度当院にご相談ください。</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <p class="ac-title">施術を受けるとどれくらいで顔と体の歪みがなくなりますか?</p>
+                    <div class="ac-box">
+                        <p>お客様の顔や体の状態、生活習慣、食習慣によって個人差があります。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="campaign-section">
+                <div class="campaign-container">
+                    <h2 class="catch-copy"> <span class="marker">1回でも変化を実感！</span></h2>
+                    <p class="campaign-title">小顔矯正×骨盤矯正</p>
+                    <p class="campaign-title space-bottom">初回キャンペーン</p>
+
+                    <div class="offer-container">
+                        <div class="before-after">
+                            <img src="./img/ba.webp" alt="ビフォーアフター画像">
+                        </div>
+
+                        <div class="offer-details">
+                            <div class="offer-headline">
+                                <p class="offer-text-underline marker">本格小顔ケアを気軽に始められる</p>
+                                <p class="offer-text">初回特別価格！</p>
+                            </div>
+
+                            <div class="offer-services">
+                                <p class="service">カウンセリング</p>
+                                <p class="separator">×</p>
+                                <p class="service">小顔矯正</p>
+                                <p class="separator">×</p>
+                                <p class="service">骨盤矯正</p>
+                            </div>
+
+                            <div class="price-info">
+                                <div class="regular-price-item">
+                                    <p class="regular-price">通常価格</p>
+                                    <p class="strikethrough">10,000<span class="small-font">円</span></p>
+                                </div>
+                                <p class="service">初回限定価格</p>
+                                <div class="discount-info">
+                                    <div class="discount-clip">
+                                        <p class="discount-percentage">52<span class="small-font">%</span></p>
+                                        <p class="discount-off-text">OFF</p>
+                                    </div>
+                                    <p class="discounted-price">4,800<span class="small-font">円</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="note">※店舗によって初回限定価格が異なる場合がございます。ご了承ください。</p>
+
+                        <div class="reservation-info">
+                            <p class="reservation-text"><span class="out-font first">\</span><span
+                                    class="font">\</span>ホットペッパービューティーから簡単予約！<span class="font">/</span><span
+                                    class="out-font second">/</span></p>
+                        </div>
+
+                        <a href="#">
+                            <img src="./img/button01.webp" alt="近くの他の店舗を予約する ▶">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="space-area"></div>
+
+            <footer class="footer">
+                <div>
+                    <a href="#">
+                        <img src="./img/footer-btn.webp" alt="近くの店舗の予約はこちらから">
+                    </a>
+                </div>
+            </footer>
+
+        </div>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/plus-feel.js" defer></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
