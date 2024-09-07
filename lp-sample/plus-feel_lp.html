@@ -2,6 +2,12 @@
 <html lang="ja">
 
 <head>
+    <!-- 重要な画像をプリロード -->
+    <link rel="preload" as="image" href="./img/logo.webp">
+    <link rel="preload" as="image" href="./img/header-cta-button.webp">
+    <link rel="preload" as="image" href="./img/feel.webp">
+    <link rel="preload" as="image" href="./img/footer-btn.webp">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プラスフィール</title>
@@ -12,6 +18,14 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        h2,
+        h3,
+        h4,
+        li,
+        a {
+            font-family: "YuGothic", "Yu Gothic", "游ゴシック体", "游ゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         }
 
         img {
@@ -58,8 +72,8 @@
     <noscript>
         <link rel="stylesheet" href="non-critical.css">
     </noscript>
-    
-    <link rel="stylesheet" href="non-critical.css">
+
+    <!-- <link rel="stylesheet" href="non-critical.css"> -->
 </head>
 
 <body>
@@ -130,7 +144,8 @@
                         </div>
 
                         <a href="#">
-                            <img loading="lazy" width="1306" height="370" src="./img/button01.webp" alt="近くの他の店舗を予約する ▶">
+                            <img loading="lazy" width="1306" height="370" src="./img/button01.webp"
+                                alt="近くの他の店舗を予約する ▶">
                         </a>
                     </div>
                 </div>
@@ -142,32 +157,37 @@
                 </div>
                 <div class="concerns-list">
                     <div class="concern-item">
-                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern01.webp" alt="お悩み01">
+                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern01.webp"
+                            alt="お悩み01">
                         <div class="concern-text-box">
                             <p class="concern-text">年齢のせいで<span class="concern-emphasis">顔が浮腫み<br>やすくなった</span>気がする</p>
                         </div>
                     </div>
                     <div class="concern-item reverse">
-                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern02.webp" alt="お悩み02">
+                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern02.webp"
+                            alt="お悩み02">
                         <div class="concern-text-box">
                             <p class="concern-text">顔のむくみ、たるみ、歪みの<br>せいで<span class="concern-emphasis">大きく見えてしまう</span>
                             </p>
                         </div>
                     </div>
                     <div class="concern-item">
-                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern03.webp" alt="お悩み03">
+                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern03.webp"
+                            alt="お悩み03">
                         <div class="concern-text-box">
                             <p class="concern-text">家族に姿勢が悪いと<br><span class="concern-emphasis">言われるようになった</span></p>
                         </div>
                     </div>
                     <div class="concern-item reverse">
-                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern04.webp" alt="お悩み04">
+                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern04.webp"
+                            alt="お悩み04">
                         <div class="concern-text-box">
                             <p class="concern-text">エステに通っているけど<br><span class="concern-emphasis">変化を感じない</span></p>
                         </div>
                     </div>
                     <div class="concern-item">
-                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern05.webp" alt="お悩み05">
+                        <img loading="lazy" width="546" height="546" class="concern-img" src="./img/concern05.webp"
+                            alt="お悩み05">
                         <div class="concern-text-box">
                             <p class="concern-text">小顔のセルフマッサージ<br>を続けているけど、<br><span
                                     class="concern-emphasis">変化を感じない</span></p>
@@ -222,7 +242,8 @@
                 <div class="face-container">
                     <div class="face-concerns-box">
                         <div class="moyamoya-box">
-                            <img loading="lazy" width="100%" height="auto" class="face-concerns-img" src="./img/face-concerns.webp" alt="顔の悩みを持つ女性">
+                            <img loading="lazy" width="100%" height="auto" class="face-concerns-img"
+                                src="./img/face-concerns.webp" alt="顔の悩みを持つ女性">
                         </div>
                     </div>
                     <div class="face-concerns-list">
@@ -237,7 +258,8 @@
                         <img loading="lazy" width="100%" height="auto" src="./img/woman01.webp" alt="顔の悩みを持つ女性">
                     </div>
                     <div class="main-image-box">
-                        <img loading="lazy" width="100%" height="auto" class="main-img-2" src="./img/spine.webp" alt="側弯のある背骨">
+                        <img loading="lazy" width="100%" height="auto" class="main-img-2" src="./img/spine.webp"
+                            alt="側弯のある背骨">
                     </div>
                 </div>
                 <div class="cause-section">
@@ -252,7 +274,8 @@
                                 <div class="arrow-head arrow-head-bottom"></div>
                             </div>
                         </div>
-                        <img loading="lazy" width="100%" height="auto" class="main-img-2" src="./img/body.webp" alt="人体全体図">
+                        <img loading="lazy" width="100%" height="auto" class="main-img-2" src="./img/body.webp"
+                            alt="人体全体図">
                     </div>
                     <div>
                         <p>人の身体は<br>頭から足先まで<br>すべて繋がっています。</p>
@@ -445,7 +468,8 @@
                         </div>
 
                         <a href="#">
-                            <img loading="lazy" width="100%" height="auto" src="./img/button01.webp" alt="近くの他の店舗を予約する ▶">
+                            <img loading="lazy" width="100%" height="auto" src="./img/button01.webp"
+                                alt="近くの他の店舗を予約する ▶">
                         </a>
                     </div>
                 </div>
@@ -461,12 +485,14 @@
                         <p class="homeostasis-text">ホメオスタシス</p>
                         <div class="homeostasis-img-box">
                             <div class="homeostasis-img-item1">
-                                <img loading="lazy" width="100%" height="auto" src="./img/treatment-04.webp" alt="効果を実感する女性">
+                                <img loading="lazy" width="100%" height="auto" src="./img/treatment-04.webp"
+                                    alt="効果を実感する女性">
                                 <p class="effect-text">効果を<br>実感！</p>
                                 <div class="step">1回目の施術</div>
                             </div>
                             <div class="homeostasis-img-item2">
-                                <img loading="lazy" width="100%" height="auto" src="./img/treatment-03.webp" alt="姿勢が元に戻る">
+                                <img loading="lazy" width="100%" height="auto" src="./img/treatment-03.webp"
+                                    alt="姿勢が元に戻る">
                                 <div class="step">元に戻る</div>
                             </div>
                         </div>
@@ -549,7 +575,8 @@
 
             <section class="reason-section">
                 <p class="reason-en">REASON</p>
-                <img loading="lazy" width="100%" height="auto" class="reason-img" src="./img/reason-sec.webp" alt="女性スタッフ">
+                <img loading="lazy" width="100%" height="auto" class="reason-img" src="./img/reason-sec.webp"
+                    alt="女性スタッフ">
                 <div class="reason-text-box">
                     <h2 class="reason-title">プラスフィールが選ばれる</h2>
                     <h3 class="reason-subtitle"><span class="out-fit-number">4</span>つの理由</h3>
@@ -559,7 +586,8 @@
                     <div class="reason-item">
                         <div class="reason-image">
                             <span class="reason-number">01</span>
-                            <img loading="lazy" width="100%" height="auto" src="./img/reason-number01.webp" alt="女性スタッフ">
+                            <img loading="lazy" width="100%" height="auto" src="./img/reason-number01.webp"
+                                alt="女性スタッフ">
                         </div>
                         <h4 class="reason-item-title">施術スタッフは全員女性で安心！<br>業界最高水準の採用基準をクリアしたスタッフが対応致します</h4>
                         <p class="reason-description">
@@ -581,7 +609,8 @@
                     <div class="reason-item">
                         <div class="reason-image">
                             <span class="reason-number">03</span>
-                            <img loading="lazy" width="100%" height="auto" src="./img/reason-number03.webp" alt="YouTube登録者数">
+                            <img loading="lazy" width="100%" height="auto" src="./img/reason-number03.webp"
+                                alt="YouTube登録者数">
                         </div>
                         <h4 class=" reason-item-title">YouTube登録者数100万以上！<br>総裁数◯回以上の<br>小顔術が受けられる！</h4>
                         <p class="reason-description">
@@ -607,20 +636,24 @@
                     <div class="method-box">
                         <div class="crown">
                             <div class="crown-item">
-                                <img loading="lazy" width="100%" height="auto" src="./img/crown01.webp" alt="月桂樹" class="laurel-left">
+                                <img loading="lazy" width="100%" height="auto" src="./img/crown01.webp" alt="月桂樹"
+                                    class="laurel-left">
                                 <div class="text-container">
                                     <p class="crown-title">YouTube登録者数</p>
                                     <p class="subscribers"><span class="big-font">100</span>万人超え！</p>
                                 </div>
-                                <img loading="lazy" width="100%" height="auto" src="./img/crown02.webp" alt="月桂樹" class="laurel-right">
+                                <img loading="lazy" width="100%" height="auto" src="./img/crown02.webp" alt="月桂樹"
+                                    class="laurel-right">
                             </div>
                             <div class="crown-item">
-                                <img loading="lazy" width="100%" height="auto" src="./img/crown01.webp" alt="月桂樹" class="laurel-left">
+                                <img loading="lazy" width="100%" height="auto" src="./img/crown01.webp" alt="月桂樹"
+                                    class="laurel-left">
                                 <div class="text-container">
                                     <p class="crown-title"> YouTube総再生数</p>
                                     <p class="subscribers"><span class="big-font">1.9</span>億回！</p>
                                 </div>
-                                <img loading="lazy" width="100%" height="auto" src="./img/crown02.webp" alt="月桂樹" class="laurel-right">
+                                <img loading="lazy" width="100%" height="auto" src="./img/crown02.webp" alt="月桂樹"
+                                    class="laurel-right">
                             </div>
                         </div>
                         <div class="method-person">
@@ -773,9 +806,12 @@
                     </dl>
 
                     <div class="reservation-buttons">
-                        <a href="#"><img loading="lazy" width="100%" height="auto" src="./img/store-btn1.webp" alt="ホットペッパーから予約する"></a>
-                        <a href="#"><img loading="lazy" width="100%" height="auto" src="./img/store-btn2.webp" alt="LINEから予約する"></a>
-                        <a href="#"><img loading="lazy" width="100%" height="auto" src="./img/button01.webp" alt="近くの他の店舗を探す"></a>
+                        <a href="#"><img loading="lazy" width="100%" height="auto" src="./img/store-btn1.webp"
+                                alt="ホットペッパーから予約する"></a>
+                        <a href="#"><img loading="lazy" width="100%" height="auto" src="./img/store-btn2.webp"
+                                alt="LINEから予約する"></a>
+                        <a href="#"><img loading="lazy" width="100%" height="auto" src="./img/button01.webp"
+                                alt="近くの他の店舗を探す"></a>
                     </div>
                 </div>
             </section>
@@ -871,7 +907,8 @@
                         </div>
 
                         <a href="#">
-                            <img loading="lazy" width="100%" height="auto" src="./img/button01.webp" alt="近くの他の店舗を予約する ▶">
+                            <img loading="lazy" width="100%" height="auto" src="./img/button01.webp"
+                                alt="近くの他の店舗を予約する ▶">
                         </a>
                     </div>
                 </div>
@@ -895,10 +932,10 @@
     <script src="./js/plus-feel.js" defer></script>
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function(err) {
+                }, function (err) {
                     console.log('ServiceWorker registration failed: ', err);
                 });
             });
