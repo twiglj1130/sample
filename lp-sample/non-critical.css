@@ -13,6 +13,33 @@ a {
     font-family: "YuGothic", "Yu Gothic", "游ゴシック体", "游ゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
+/* Outfit Font - Thin (100) */
+@font-face {
+    font-family: 'Outfit';
+    src: url('./fonts/Outfit-Thin-Subset.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Outfit Font - Light (300) */
+@font-face {
+    font-family: 'Outfit';
+    src: url('./fonts/Outfit-Light-Subset.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Outfit Font - Medium (500) */
+@font-face {
+    font-family: 'Outfit';
+    src: url('./fonts/Outfit-Medium-Subset.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 .campaign-section {
     padding: 30px 15px;
     background:
@@ -1616,7 +1643,7 @@ a {
 
 .label {
     position: absolute;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: #635E5B;
 }
@@ -1728,7 +1755,7 @@ a {
     font-weight: 100;
     color: #FFFFFF;
     position: absolute;
-    top: -22px;
+    top: -15px;
     left: -7px;
 }
 
@@ -1830,7 +1857,7 @@ a {
 /* メソッドセクション */
 .method-section {
     padding: 40px 10px 10px;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1843,7 +1870,7 @@ a {
 .method-box {
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .method-person {
@@ -1952,12 +1979,13 @@ a {
 
 .step-number {
     font-size: 39px;
-    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
     background: linear-gradient(235.95deg, #EBABC3 21.81%, #C6A2C6 49.72%, #8BB9D9 78.19%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-top: -3rem;
+    margin-top: -2.5rem;
     margin-bottom: 1rem;
     position: absolute;
     left: 11px;
@@ -2222,6 +2250,13 @@ iframe {
     max-width: 500px;
 }
 
+
+/*=============== レスポンシブ対応 ===============*/
+@media (min-width: 434px) {
+    .label {
+        font-size: 16px;
+    }
+}
 
 @media (min-width: 460px) {
     .none-460 {
