@@ -1238,6 +1238,20 @@ p {
 .result-title {
     font-size: 24px;
     color: #fff;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.result-title::after {
+    content: '';
+    display: block;
+    width: 110%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto 10px;
 }
 
 .before-after-images {
@@ -1252,19 +1266,6 @@ p {
     color: #fff;
     font-size: 16px;
     text-align: center;
-}
-
-.treatment-info p {
-    margin: 5px 0;
-}
-
-.treatment-info::before {
-    content: '';
-    display: block;
-    width: 80%;
-    height: 2px;
-    background-color: #fff;
-    margin: 10px auto;
 }
 
 /* 解消できる理由 セクション*/
@@ -1457,12 +1458,11 @@ p {
     align-items: center;
 }
 
-.effect-text {
+.effect-svg-text {
     position: absolute;
-    top: -12px;
-    left: -28px;
-    transform: rotate(-10deg);
-    font-size: 13px;
+    top: -38px;
+    left: -40px;
+    width: 80%;
 }
 
 .homeostasis-img-item1::before {
@@ -1473,7 +1473,7 @@ p {
     background: url(./img/sparkling.webp) center / 50% no-repeat;
     z-index: -1;
     left: -50%;
-    top: -34px;
+    top: -49px;
     transform: translateX(-13px);
 }
 
@@ -1610,7 +1610,7 @@ p {
 }
 
 .price {
-    font-family: 'DIN 2014', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #F9F3B4;
@@ -1768,12 +1768,19 @@ p {
     padding: 0 20px;
 }
 
+.reason-svg {
+    display: flex;
+    align-items: baseline;
+}
+
 .reason-subtitle {
     font-size: 32px;
     text-align: left;
     margin-bottom: 30px;
     z-index: 1;
     position: relative;
+    bottom: 3px;
+    left: 4px;
 }
 
 .out-fit-number {

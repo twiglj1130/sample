@@ -1,7 +1,7 @@
 const CACHE_NAME = 'my-site-cache-v1';
 const urlsToCache = [
-    '/', // ホームページのルート
-    '/plus-feel_lp.html', // プラスフィールLPのHTMLファイル
+    // '/', // ホームページのルート
+    // '/plus-feel_lp.html', // プラスフィールLPのHTMLファイル  例'https://fue-cr.com/page-lp/',
     '/non-critical.css', // LPのCSSファイル
     '/js/plus-feel.js', // メインのJavaScriptファイル
     // その他キャッシュしたいリソースをここに追加
